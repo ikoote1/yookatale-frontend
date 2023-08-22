@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: raleway;
+  src: url(../public/assets/fonts/Raleway/static/Raleway-Regular.ttf);
+}
+@font-face {
+  font-family: ralewayMed;
+  src: url(../public/assets/fonts/Raleway/static/Raleway-Medium.ttf);
+}
+@font-face {
+  font-family: ralewayBold;
+  src: url(../public/assets/fonts/Raleway/static/Raleway-Bold.ttf);
+}
+@font-face {
+  font-family: ralewayExtraBold;
+  src: url(../public/assets/fonts/Raleway/static/Raleway-Black.ttf);
+}
+@font-face {
+  font-family: ralewayLight;
+  src: url(../public/assets/fonts/Raleway/static/Raleway-Light.ttf);
+}
+
+@font-face {
+  font-family: cabin;
+  src: url(../public/assets/fonts/Cabin/static/Cabin-Regular.ttf);
+}
+@font-face {
+  font-family: cabinMed;
+  src: url(../public/assets/fonts/Cabin/static/Cabin-Medium.ttf);
+}
+@font-face {
+  font-family: cabinBold;
+  src: url(../public/assets/fonts/Cabin/static/Cabin-SemiBold.ttf);
+}
+@font-face {
+  font-family: cabinExtraBold;
+  src: url(../public/assets/fonts/Cabin/static/Cabin-Bold.ttf);
+}
+
+.secondary-font {
+  font-family: raleway;
+}
+.secondary-med-font {
+  font-family: ralewayMed;
+}
+.secondary-bold-font {
+  font-family: ralewayBold;
+}
+.secondary-extra-bold-font {
+  font-family: ralewayExtraBold;
+}
+.secondary-light-font {
+  font-family: ralewayLight;
+}
+
+.primary-font {
+  font-family: cabin;
+}
+.primary-med-font {
+  font-family: cabinMed;
+}
+.primary-bold-font {
+  font-family: cabinBold;
+}
+.primary-extra-bold-font {
+  font-family: cabinExtraBold;
+}
+
+* {
+  font-family: cabin;
+  /* font-size: 1rem; */
+  /* padding: 0;
+  margin: 0; */
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: all 0.4s ease-out;
+}
+
+body {
+  background: #fcfafa;
+}
+
+.text {
+  color: #1f793a;
+}
+
+.container__hide__scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.container__hide__scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.card__design {
+  /* border: 1px solid rgba(255, 255, 255, 0.222); */
+}
+
+.card__design__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d !important;
+}
+
+.card__design:hover .card__design__inner {
+  transform: rotateY(180deg) !important;
+}
+
+.card__design__front,
+.card__design__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.card__design__front {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px); */
+}
+
+.car__design__back {
+  transform: rotateY(180deg) !important;
+}
+
+.__truncate {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: pre-wrap;
+}
+
+.__blog-content ul,
+.__blog-content ol,
+.__blog-content div {
+  padding: 0 0 0 1rem;
+}
+
+/* // style for loader animation */
+.__gooey {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 142px;
+  height: 40px;
+  margin: -20px 0 0 -71px;
+  background: #fff;
+  filter: contrast(20);
+}
+.__gooey .dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  filter: blur(4px);
+  background: #000;
+  border-radius: 50%;
+  transform: translateX(0);
+  animation: dot 2.8s infinite;
+}
+.__gooey .dots {
+  transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  animation: dots 2.8s infinite;
+}
+.__gooey .dots span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  filter: blur(4px);
+  background: #000;
+  border-radius: 50%;
+}
+@-moz-keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+@-webkit-keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+@-o-keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+@keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+@-moz-keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
+}
+@-webkit-keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
+}
+@-o-keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
+}
+@keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
+}

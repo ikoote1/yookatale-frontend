@@ -1,0 +1,20 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:../lib/invite/invite.db"
+}
+
+model Message {
+  id         Int    @id @default(autoincrement())
+  message_id String @unique
+  message    String
+  recipient  String
+  channel String
+  date DateTime
+}
